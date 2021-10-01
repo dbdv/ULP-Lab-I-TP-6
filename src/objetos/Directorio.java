@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package main;
+package objetos;
 
 
 import java.util.ArrayList;
@@ -28,6 +28,10 @@ public class Directorio {
             return true;
         }
         
+    }
+    
+    public boolean contiene(int num){
+        return directorio.containsKey(num);
     }
     
     public Cliente buscarCliente(int telefono){
@@ -57,7 +61,13 @@ public class Directorio {
     }
     
     public void borrarCliente(int dni){
-        
+        Iterator it = directorio.keySet().iterator();
+        if(it.hasNext()){
+            int key =(int) it.next();
+            if(directorio.get(key).getDni() == dni){
+                directorio.remove(key);
+            }
+        }
     }
 }
 
