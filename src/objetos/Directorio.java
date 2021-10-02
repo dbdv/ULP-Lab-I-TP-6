@@ -30,8 +30,8 @@ public class Directorio {
         
     }
     
-    public boolean contiene(int num){
-        return directorio.containsKey(num);
+    public boolean contiene(int telefono){
+        return directorio.containsKey(telefono);
     }
     
     public Cliente buscarCliente(int telefono){
